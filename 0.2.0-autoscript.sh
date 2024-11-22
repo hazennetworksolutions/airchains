@@ -180,10 +180,10 @@ sudo systemctl enable junctiond
 
 # Initialize the node
 printGreen "7. Initializing the node..."
-prysmd config set client chain-id ${AIRCHAINS_CHAIN_ID}
-prysmd config set client keyring-backend test
-prysmd config set client node tcp://localhost:${AIRCHAINS_PORT}657
-prysmd init ${MONIKER} --chain-id ${AIRCHAINS_CHAIN_ID}
+junctiond config set client chain-id ${AIRCHAINS_CHAIN_ID}
+junctiond config set client keyring-backend test
+junctiond config set client node tcp://localhost:${AIRCHAINS_PORT}657
+junctiond init ${MONIKER} --chain-id ${AIRCHAINS_CHAIN_ID}
 
 # Download genesis and addrbook files
 printGreen "8. Downloading genesis and addrbook..."
