@@ -99,7 +99,7 @@ sudo systemctl stop junctiond
 sudo systemctl disable junctiond
 sudo rm -rf /etc/systemd/system/junctiond.service
 sudo rm $(which junctiond)
-sudo rm -rf $HOME/.junctiond
+sudo rm -rf $HOME/.junction
 sed -i "/junctiond_/d" $HOME/.bash_profile
 
 # Update packages and install dependencies
