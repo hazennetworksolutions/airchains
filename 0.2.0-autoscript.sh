@@ -148,8 +148,8 @@ wget -O junctiond https://github.com/airchains-network/junction/releases/downloa
 chmod +x junctiond
 mkdir -p $HOME/.junction/cosmovisor/genesis/bin
 mv $HOME/junctiond $HOME/.junction/cosmovisor/genesis/bin
-sudo ln -s $HOME/.junction/cosmovisor/genesis $HOME/.junction/cosmovisor/current -f
-sudo ln -s $HOME/.junction/cosmovisor/current/bin/junctiond /usr/local/bin/junctiond -f
+sudo ln -sf $HOME/.junction/cosmovisor/genesis $HOME/.junction/cosmovisor/current -f
+sudo ln -sf $HOME/.junction/cosmovisor/current/bin/junctiond /usr/local/bin/junctiond -f
 
 # Create service file
 printGreen "6. Creating service file..." && sleep 1
