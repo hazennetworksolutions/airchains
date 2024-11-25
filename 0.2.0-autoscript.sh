@@ -148,6 +148,11 @@ wget -O junctiond https://github.com/airchains-network/junction/releases/downloa
 chmod +x junctiond
 mkdir -p $HOME/.junction/cosmovisor/genesis/bin
 mv $HOME/junctiond $HOME/.junction/cosmovisor/genesis/bin
+cd $HOME
+wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.2.0/junctiond-linux-amd64
+chmod +x junctiond
+mkdir -p $HOME/.junction/cosmovisor/upgrades/jip-2/bin
+sudo mv $HOME/junctiond $HOME/.junction/cosmovisor/upgrades/jip-2/bin
 sudo ln -sf $HOME/.junction/cosmovisor/genesis $HOME/.junction/cosmovisor/current -f
 sudo ln -sf $HOME/.junction/cosmovisor/current/bin/junctiond /usr/local/bin/junctiond -f
 
